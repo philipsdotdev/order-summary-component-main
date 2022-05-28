@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <meta name="description" content="Tunora is a streaming service that allows you to listen to over 90 million songs. Its great features include the ability to download your favorite tracks.">
+    <title>Tunora - The Caribbean Music Streaming App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>   
+    <!-- Div section for the entire checkout elements -->    
+    <div class="checkout-wrapper">
+
+        <!-- hero section housing the illustration -->
+        <div class="hero-image">
+            <img src="/images/illustration-hero.svg" alt="Hero illustration showing an happy female character who's listening to music on a phone with an headset.">
+        </div>
+
+        <!-- Div section for the order title, description, and plan selector -->
+        <div class="order-description">
+            <h2 class="order-title">Order Summary</h2>
+            <p class="order-body-text">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+        </div>
+
+        <!-- Div section for plan selection. Class "order-plan" is the outer flex/container for classes "music icon" "plan-change-space" -->
+        <div class="order-plan">
+
+            <div class="music-icon"> <!-- Music icon div/container -->
+                <img src="/images/icon-music.svg" alt="Icon of a music note." id="music-icon">
+            </div>
+
+            <div class="plan-change-space"> <!-- Container to inline plan, price and change link  -->
+                <div class="order-package-price">
+                    <p class="order-plan-text">Annual Plan</p>
+                    <p class="order-price-text">$59.99/year</p>
+                </div>
+                <div class="change-plan"> <!-- Div for change link  -->
+                    <p class="change-plan-text">Change</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Div section for the checkout button and cancel order link -->
+        <div class="checkout-section">
+            <button class="checkout-button">Proceed to Payment</button> <!-- Button for checkout -->
+            <p class="cancel-order-text">Cancel Order</p>
+        </div>
+    </div>
+</body>
+</html>

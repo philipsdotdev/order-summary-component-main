@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap');
+
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%); /* button color */
+    --very-pale-blue: hsl(225, 100%, 98%); /* background color */
+    --desaturated-blue: hsl(224, 23%, 55%); /* body text color */
+    --dark-blue: hsl(223, 47%, 23%); /* heading text color */ 
+    --plan-change-color: hsla(225, 100%, 94%, 0.24); /* Plan selection container background */
+    --hover-color: hsl(245, 83%, 68%); /* hover state color */
+    --white: #fff;
+    font: 16px "Red Hat Display", sans-serif; /* 16px as the base for rem calculations */
+    font-weight: 900;
+}
+
+
+/* default the margin and padding of every element to 0 with universal selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* attributes for body */
+body {
+    background-color: var(--pale-blue);
+    background-image: url(/images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    min-width: 100vw; /* min width set to 100vh solves vertical scrollbar problem */
+    min-height: 100vh; /* min height set to 100vh solves horizontal scrollbar problem */
+}
+
+
+/* attributes for the container housing the checkout elements */
+.checkout-wrapper {
+    margin: 0 auto;
+    background-color: var(--very-pale-blue);
+    padding: 0;
+    border-radius: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    height: 696px;
+    width: 425px;
+    box-shadow: 0 5px 30px 2px rgba(0, 0, 0, .04), 0 8px 25px 3px rgba(0, 0, 0, .05);
+}
+
+
+/* hero section attributes. will later add cool hover effects like zoom-in after learning */
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.25rem 1.25rem 0 0; /* top-left top-right bottom-right bottom-left */
+}
+
+.hero-image img:hover {
+    filter: hue-rotate(-20deg); /* slightly changes the hue of the hero image when mouse hover */
+}
+
+
+/* attributes for the heading and body copy */
+
+/* container/div for heading and body copy */
+.order-description {
+    padding: 3rem 3.125rem 0;
+    color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* heading */
+.order-description h2 {
+    font-size: 1.7rem;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 1.1rem;
+}
+
+/* body copy */
+.order-description p {
+    margin: 0 1rem;
+    text-align: center;
+    line-height: 24px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--desaturated-blue);
+}
+
+
+/* container for plan selection */
+.order-plan {
+    display: flex;
+    background-color: var(--plan-change-color);
+    margin: 1.5rem 3.4375rem 0;
+    border-radius: 1rem;
+    padding: 1.3rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.music-icon {
+    margin-right: 1.25rem;    
+}
+
+.plan-change-space {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;   
+    flex: 1;
+    align-items: center;
+}
+
+.order-plan-text {
+    font-weight: 900;
+    font-size: 1rem;
+    color: var(--dark-blue);
+    padding-bottom: 0.2rem;
+}
+
+.order-price-text {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--desaturated-blue);
+    padding-top: 0.2rem;
+}
+
+.change-plan {
+    color: var(--bright-blue);
+    font-size: 0.95rem;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.change-plan:hover {
+    color: var(--hover-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* container attributes for the checkout section */
+.checkout-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1.8rem 3.4375rem 0;
+}
+
+.checkout-button {
+    background-color: var(--bright-blue);
+    border: none;
+    height: 3.125rem;
+    border-radius: 0.7rem; 
+    font-weight: inherit;
+    color: var(--white);
+    font: inherit;   
+    font-size: 0.95rem;
+    box-shadow: 0 5px 30px 2px rgba(0, 0, 0, .04), 0 8px 15px 3px rgba(0, 0, 0, .2);
+}
+
+.checkout-button:hover {
+    background-color: var(--hover-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cancel-order-text {
+    margin-top: 1.9rem;
+    text-align: center;
+    font-weight: 700;
+    color: var(--desaturated-blue);
+    text-decoration: none;
+}
+
+.cancel-order-text:hover {
+    color: var(--dark-blue);
+    cursor: pointer;
+}
+
+
+
+
+@media only screen and (max-width: 1366px) {      
+    body {
+        height: 100vh;
+    }
+    .checkout-wrapper {
+        transform: scale(0.7);        
+    }
+}
